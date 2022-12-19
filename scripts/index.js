@@ -22,7 +22,7 @@ function Logout(){
     const token = localStorage.getItem("token")
     getUsername();
     console.log(token)
-    location.href = "./view/signin.html"
+    location.href = "../view/signin.html"
 }
 
 async function getUsername(){
