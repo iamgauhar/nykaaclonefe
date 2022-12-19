@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/output.css">
 </head>
 <body>
+
  <div class="border h-screen ">
     <div class=" border block p-6 rounded-lg shadow-lg bg-white max-w-sm relative top-1/2 left-1/2 " style="transform: translate(-50%, -50%);">
 <h1 class="text-2xl text-center pb-4">Seller Login</h1>
@@ -74,7 +75,9 @@
             transition
             duration-150
             ease-in-out">Sign in</button>
-
+            <div id="login-loader" class="loader absolute spinner-border animate-spin inline-block w-8 h-8 text-rose-700 border-4 rounded-full m-12 z-50" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
             <p class="pt-4 text-xs text-center">Not a seller? <a class="text-rose-700" href="sellersign.html">Click here</a> </p>
         </form>
       </div>
@@ -88,5 +91,6 @@
   
 </div>
 </body>
+<script src="./node_modules/tw-elements/dist/js/index.min.js"></script>
 <script src="./scripts/sellerlogin.js"></script>
 </html>

@@ -1,9 +1,12 @@
 
 document.querySelector("#pass_msg_1").style.display = "none"
 document.querySelector("#fail_msg_2").style.display = "none"
+document.querySelector("#login-loader").style.display = "none"
 
 document.querySelector("form").addEventListener("submit", async(e)=>{
     e.preventDefault()
+document.querySelector("#login-loader").style.display = "block"
+    
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
 
@@ -30,6 +33,7 @@ try {
         localStorage.setItem("sellerid", (result.sellerid))
     }
     
+    document.querySelector("#login-loader").style.display = "none"
 
     if(result.msg == "Login successfull"){
         document.querySelector("#pass_msg_1").style.display = "block"
